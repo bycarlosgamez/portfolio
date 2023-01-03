@@ -5,11 +5,11 @@
   --secondaryColor: #4c5452;
   --accentColor: #69d3bd;
   --whiteColor: #fff;
-  --card-1: hsla(349, 68%, 73%, 0.7);
-  --card-2: hsla(203, 75%, 69%, 0.7);
-  --card-3: hsla(178, 90%, 35%, 0.7);
-  --card-4: hsla(327, 45%, 62%, 0.7);
-  --main-card: hsla(168, 55%, 62%, 0.7);
+  --card-2: hsla(203, 75%, 69%, 0.2);
+  --card-1: hsla(349, 68%, 73%, 0.2);
+  --card-3: hsla(178, 90%, 35%, 0.2);
+  --card-4: hsla(327, 45%, 62%, 0.2);
+  --main-card: hsla(168, 55%, 62%, 0.2);
   --modal: hsla(165, 5%, 31%, 0.85);
 
   /* Fonts */
@@ -368,7 +368,7 @@ img {
   box-shadow: var(--dropShadow-btn);
 }
 
-@media (hover) {
+@media (hover: hover) {
   .card-content {
     transform: translateY(-40%);
     transition: transform 500ms ease;
