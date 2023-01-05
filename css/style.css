@@ -714,6 +714,9 @@ input.button:hover {
 .contact-form-loader {
   margin-top: 1rem;
   width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-form-response {
@@ -910,6 +913,7 @@ input.button:hover {
 
   .submit {
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
 
