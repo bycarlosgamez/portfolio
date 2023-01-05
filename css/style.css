@@ -10,6 +10,7 @@
   --card-3: hsla(178, 90%, 35%, 0.7);
   --card-4: hsla(327, 45%, 62%, 0.7);
   --main-card: hsla(168, 55%, 62%, 0.7);
+  --modal: hsla(165, 5%, 31%, 0.85);
 
   /* Fonts */
   --headerFont: 'Dosis', sans-serif;
@@ -439,7 +440,7 @@ img {
 }
 
 a.button,
-button.button {
+input.button {
   display: inline-block;
   text-align: center;
   padding: 1rem;
@@ -457,7 +458,7 @@ button.button {
 }
 
 a.button:hover,
-button.button:hover {
+input.button:hover {
   background-color: var(--whiteColor);
   color: var(--accentColor);
   border: 2px solid var(--accentColor);
@@ -472,7 +473,7 @@ button.button:hover {
   }
 
   label.label-btn,
-  button.button {
+  input.button {
     max-width: max-content;
   }
 }
@@ -656,6 +657,8 @@ button.button:hover {
   background-color: var(--main-card);
 }
 
+/* ******** Form Component ******** */
+
 .form {
   max-width: 478px;
   margin: 6rem auto;
@@ -687,7 +690,7 @@ button.button:hover {
   border-radius: 4px;
 }
 
-.form input,
+.form input:not(.button),
 .form textarea {
   border: 1px solid var(--secondaryColor);
   border-radius: 4px;
@@ -696,6 +699,36 @@ button.button:hover {
   padding: 12px 0 12px 24px;
   filter: drop-shadow(var(--dropShadow));
 }
+
+.form textarea {
+  resize: none;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-form-loader {
+  margin-top: 1rem;
+  width: 48px;
+}
+
+.contact-form-response {
+  padding: 1rem 4rem;
+  width: content;
+  background-color: var(--accentColor);
+  border-radius: 1rem;
+}
+
+.modal#thanks:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ******** Footer Component ******** */
 
 .footer * {
   padding: 0;
@@ -737,6 +770,39 @@ button.button:hover {
   display: flex;
   justify-content: center;
   gap: 72px;
+}
+
+/* ********** Modal ********** */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--modal);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
 }
 
 /* ******** Desktop ******** */
@@ -842,6 +908,15 @@ button.button:hover {
     margin-top: 72px;
   }
 
+  .submit {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-form-loader {
+    margin: 0 auto;
+  }
+
   .footer {
     display: flex;
     justify-content: space-between;
@@ -864,4 +939,13 @@ button.button:hover {
 .bold {
   font: var(--button);
   font-weight: 800;
+}
+
+.text-center {
+  text-align: center;
+  align-self: center;
+}
+
+.none {
+  display: none;
 }
