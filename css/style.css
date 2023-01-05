@@ -427,7 +427,7 @@ img {
   }
 }
 
-/* ******************** Utilities ******************** */
+/* ******************** Component Utilities ******************** */
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -858,4 +858,10 @@ button.button:hover {
     margin: 0 0;
     text-align: right;
   }
+}
+
+/* ******************** Utilities ******************** */
+.bold {
+  font: var(--button);
+  font-weight: 800;
 }
