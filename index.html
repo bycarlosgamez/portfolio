@@ -194,17 +194,33 @@
 			<!-- <div class="right"> -->
 				<form action="#" method="#" class="contact-form">
 					<label for="form-name">
-						<input id="form-name" type="text" placeholder="Name" name="name" required>
+						<input id="form-name" type="text" placeholder="Name" name="name" title="Field allows only letters and spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
 					</label>
 					<label for="form-email">
-						<input id="form-email" type="email" placeholder="Email" name="email" required>
+						<input id="form-email" type="email" placeholder="Email" name="email" title="Invalid email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
 					</label>
 					<label for="form-message">
 						<textarea id="form-message" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
 					</label>
-					<button id="form-btn" type="submit" class="button" name="submit-btn">Send me a message</button>
-				</form>
+					<div class="submit">
+						<input id="form-btn" type="submit" class="button" name="submit-btn" value="Send me a message">
+						<div class="contact-form-loader text-center none">
+							<img src="img/loader.svg" alt="Sending...">
+						</div>
+					</div>
+					
+				</form>	
 			<!-- </div> -->
+			<article id="thanks" class="modal">
+				<div class="modal-content text-center">
+					<article class="contact-form-response">
+						<h3>
+							Thank you 
+							<br>for your message!!!
+						</h3>
+					</article>
+				</div>
+			</article>
 		</section>
 
 		<footer class="footer container" id="footer">
