@@ -368,54 +368,6 @@ img {
   box-shadow: var(--dropShadow-btn);
 }
 
-@media (hover: hover) {
-  .card-content {
-    transform: translateY(-40%);
-    transition: transform 500ms ease;
-    z-index: 5;
-  }
-
-  .card:hover .card-content,
-  .card:focus-within .card-content {
-    transform: translateY(-100%);
-    transition-delay: 500ms;
-  }
-
-  .card:focus-within .card-content {
-    transition-duration: 0ms;
-  }
-
-  .card-content > *:not(.card-title) {
-    opacity: 0;
-    transition: opacity 500ms linear;
-  }
-
-  .card:hover .card-content > *:not(.card-title),
-  .card:focus-within .card-content > *:not(.card-title) {
-    opacity: 1;
-    transition-delay: 900ms;
-  }
-
-  .card-title::after {
-    transform: scaleX(0);
-  }
-
-  .card-btn {
-    transition: all 0.5s ease-in-out;
-  }
-
-  .card-btn:hover,
-  .card-btn:focus {
-    background-color: hsl(0 0% 0% / 0);
-    color: var(--accentColor);
-    border: 2px solid var(--accentColor);
-    padding: 10px 22px;
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-    transition-delay: 0ms !important;
-  }
-}
-
 @media (prefers-reduce-motion: reduce) {
   *,
   *::before,
@@ -939,6 +891,54 @@ input.button:hover {
   }
 }
 
+/* Card Mobile */
+@media (hover: hover) {
+  .card-content {
+    transform: translateY(-40%);
+    transition: transform 500ms ease;
+    z-index: 5;
+  }
+
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(-100%);
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 900ms;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+
+  .card-btn {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card-btn:hover,
+  .card-btn:focus {
+    background-color: hsl(0 0% 0% / 0);
+    color: var(--accentColor);
+    border: 2px solid var(--accentColor);
+    padding: 10px 22px;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0ms !important;
+  }
+}
 /* ******************** Utilities ******************** */
 .bold {
   font: var(--button);
