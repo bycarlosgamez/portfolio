@@ -146,6 +146,18 @@ img {
   right: 47.75%;
 }
 
+.hero .social p {
+  margin: 0;
+  padding: 0;
+}
+
+.hero .social ul {
+  display: flex;
+  justify-content: center;
+  gap: 72px;
+  padding: 2rem;
+}
+
 @media screen and (min-width: 1024px) {
   .hero {
     margin-top: -5rem;
@@ -800,6 +812,18 @@ img {
     top: 0;
     padding: 0.5rem;
     height: var(--header-height);
+  }
+
+  .hero .social {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero .social ul {
+    align-items: center;
+    padding: 0;
   }
 
   .about-me {
