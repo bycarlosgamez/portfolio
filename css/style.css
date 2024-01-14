@@ -635,6 +635,15 @@ img {
   fill: var(--first-color);
 }
 
+#loadingMessage {
+  opacity: 1;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#loadingMessage.message-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 /******************************************
 /* SITE STYLES
 /*******************************************/
