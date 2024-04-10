@@ -335,6 +335,7 @@ img {
 
 /* Card */
 .card {
+  height: 400px;
   margin-block: 24px;
   margin-inline: auto;
   padding: 0 0;
@@ -887,8 +888,10 @@ img {
   }
 
   .projects-grid {
+    height: max-content;
     display: grid;
     grid-template-columns: repeat(2, 49%);
+    grid-row: auto auto;
     justify-content: space-between;
     align-content: center;
     gap: 1.5rem;
